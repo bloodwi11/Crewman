@@ -4,8 +4,8 @@ import com.badlogic.gdx.Input;
 
 public class GameConfig {
 
-    public static final int MAP_WIDTH = 10;
-    public static final int MAP_HEIGHT = 10;
+    public static final int MAP_WIDTH = 3;
+    public static final int MAP_HEIGHT = 3;
 
     public static final float WIDTH = 800.0f; // pixels
     public static final float HEIGHT = 480.0f; // pixels
