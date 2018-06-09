@@ -24,9 +24,6 @@ public class GameConfig {
     public static final float OBJECT_WIDTH = 2.0f;
     public static final float OBJECT_HEIGHT = 1.0f;
 
-    public static final float HUD_MENU_WIDTH = 160.0f; // World units
-    public static final float HUD_MENU_HEIGHT = 480.0f; // World units
-
     public static final float UNIT_RATIO = 16.0f;
 
     public static final boolean DEBUG = false;

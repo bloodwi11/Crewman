@@ -44,7 +44,6 @@ public class GameRenderer implements Disposable {
     private final AssetManager assetManager;
     private final SpriteBatch batch;
     private TextureRegion[][] tileMap;
-    private TextureRegion[][] guiMap;
     private Texture gridTexture;
 
 
@@ -79,9 +78,9 @@ public class GameRenderer implements Disposable {
         // Plate Tile
         tileMap[2] = new TextureRegion[1];
 
-        TextureAtlas plateTile = assetManager.get(AssetDescriptors.PLATE_TILE);
         TextureAtlas nullTileAtlas = assetManager.get(AssetDescriptors.NULL_TILE);
         TextureAtlas glassTile = assetManager.get(AssetDescriptors.GLASS_TILE);
+        TextureAtlas plateTile = assetManager.get(AssetDescriptors.PLATE_TILE);
         for (int x = 0; x < tileMap.length; x++) {
             for (int y = 0; y < tileMap[x].length; y++) {
                 if (x == 0) {
@@ -96,29 +95,6 @@ public class GameRenderer implements Disposable {
             }
         }
         gridTexture = assetManager.get(AssetDescriptors.TILE_GRID);
-
-        guiMap = new TextureRegion[3][];
-        guiMap[0] = new TextureRegion[1];
-        guiMap[1] = new TextureRegion[9];
-        guiMap[2] = new TextureRegion[9];
-
-        TextureAtlas nullMenu = assetManager.get(AssetDescriptors.NULL_MENU);
-        TextureAtlas guiMenu1 = assetManager.get(AssetDescriptors.GUI_MENU_1);
-        TextureAtlas guiMenu2 = assetManager.get(AssetDescriptors.GUI_MENU_2);
-
-        for (int x = 0; x < guiMap.length; x++) {
-            for (int y = 0; y < guiMap[x].length; y++) {
-                if (x == 0) {
-                    guiMap[x][y] = nullMenu.findRegion(RegionNames.GUI_LABEL + y);
-                }
-                if (x == 1) {
-                    guiMap[x][y] = guiMenu1.findRegion(RegionNames.GUI_LABEL + y);
-                }
-                if (x == 2) {
-                    guiMap[x][y] = guiMenu2.findRegion(RegionNames.GUI_LABEL + y);
-                }
-            }
-        }
     }
 
     // == public methods ==
@@ -200,64 +176,8 @@ public class GameRenderer implements Disposable {
         batch.begin();
 
         //Draw
-        buildMenu(HUD_MENU_WIDTH, HUD_MENU_HEIGHT, HUD_WIDTH - HUD_MENU_WIDTH, 0, 2);
 
         batch.end();
-    }
-
-    private void buildMenu(float width, float height, float posX, float posY, int sheetIndex) {
-        //TODO Make menu into HUDObject (GameObject for HUD)
-        float xOffset = posX;
-        float yOffset = -posY;
-        float rows = width / UNIT_RATIO - width % UNIT_RATIO;
-        float columns = height / UNIT_RATIO - (height % UNIT_RATIO);
-
-        if (sheetIndex != 0 && sheetIndex < guiMap.length) {
-            for (int x = 0; x < rows; x++) {
-                for (int y = 0; y < columns; y++) {
-                    if (x == 0) {
-                        //Left Column
-                        if (y == 0) {
-                            //Top
-                            batch.draw(guiMap[sheetIndex][6], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        } else if (y == columns - 1) {
-                            //Center
-                            batch.draw(guiMap[sheetIndex][0], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        } else {
-                            //Bottom
-                            batch.draw(guiMap[sheetIndex][3], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        }
-                    } else if (x == rows - 1) {
-                        //Right Column
-                        if (y == 0) {
-                            //Top
-                            batch.draw(guiMap[sheetIndex][8], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        } else if (y == columns - 1) {
-                            //Center
-                            batch.draw(guiMap[sheetIndex][2], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        } else {
-                            //Bottom
-                            batch.draw(guiMap[sheetIndex][5], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                        }
-                    } else if (y == 0) {
-                        //Top
-                        batch.draw(guiMap[sheetIndex][7], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                    } else if (y == columns - 1) {
-                        //Bottom
-                        batch.draw(guiMap[sheetIndex][1], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                    } else {
-                        //Center
-                        batch.draw(guiMap[sheetIndex][4], xOffset + x * UNIT_RATIO, yOffset + y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                    }
-                }
-            }
-        } else {
-            for (int x = 0; x < rows; x++) {
-                for (int y = 0; y < columns; y++) {
-                    batch.draw(guiMap[0][0], posY + x * UNIT_RATIO, posY - y * UNIT_RATIO, UNIT_RATIO, UNIT_RATIO);
-                }
-            }
-        }
     }
 
     private void renderDebug() {

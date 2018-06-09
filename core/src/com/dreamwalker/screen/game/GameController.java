@@ -44,7 +44,7 @@ public class GameController {
         // Generate Map from demo template (All tiles set to true)
         cellMap = initialiseDemoMap(cellMap);
         manualPopulateMap(cellMap);
-        // Generate Map with perlin noise (Random true/false tilemap)
+        // Generate Map with Perlin noise (Random true/false tilemap)
         //cellMap = initialiseMap(cellMap);
 
         // Used for trimming tiles (Adds & removes tiles to smooth edges), Still broken?

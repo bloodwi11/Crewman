@@ -43,17 +43,9 @@ public class LoadingScreen extends ScreenAdapter {
         viewport = new FitViewport(com.dreamwalker.config.GameConfig.HUD_WIDTH, GameConfig.HUD_HEIGHT, camera);
         renderer = new ShapeRenderer();
 
-        assetManager.load(AssetDescriptors.DIRT);
-        assetManager.load(AssetDescriptors.ROAD);
-        assetManager.load(AssetDescriptors.GRASS);
-        assetManager.load(AssetDescriptors.SKULL);
         assetManager.load(AssetDescriptors.TILE_GRID);
-        assetManager.load(AssetDescriptors.MENU);
         assetManager.load(AssetDescriptors.NULL_TILE);
         assetManager.load(AssetDescriptors.GLASS_TILE);
-        assetManager.load(AssetDescriptors.GUI_MENU_1);
-        assetManager.load(AssetDescriptors.GUI_MENU_2);
-        assetManager.load(AssetDescriptors.NULL_MENU);
         assetManager.load(AssetDescriptors.PLATE_TILE);
     }
 
