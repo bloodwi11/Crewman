@@ -1,0 +1,145 @@
+32xGlassTileMap.png
+size: 64,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+tile0
+  rotate: false
+  xy: 0, 0
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile1
+  rotate: false
+  xy: 32, 0
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile2
+  rotate: false
+  xy: 64, 0
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile3
+  rotate: false
+  xy: 96, 0
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile4
+  rotate: false
+  xy: 0, 16
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile5
+  rotate: false
+  xy: 32, 16
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile6
+  rotate: false
+  xy: 64, 16
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile7
+  rotate: false
+  xy: 96, 16
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile8
+  rotate: false
+  xy: 0, 32
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile9
+  rotate: false
+  xy: 32, 32
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile10
+  rotate: false
+  xy: 64, 32
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile11
+  rotate: false
+  xy: 96, 32
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile12
+  rotate: false
+  xy: 0, 48
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile13
+  rotate: false
+  xy: 32, 48
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile14
+  rotate: false
+  xy: 64, 48
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile15
+  rotate: false
+  xy: 96, 48
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile16
+  rotate: false
+  xy: 0, 64
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile17
+  rotate: false
+  xy: 32, 64
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile18
+  rotate: false
+  xy: 64, 64
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
+tile19
+  rotate: false
+  xy: 96, 64
+  size: 32, 16
+  orig: 32, 16
+  offset: 0, 0
+  index: -1
